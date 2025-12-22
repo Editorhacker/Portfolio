@@ -1,5 +1,8 @@
 import React from "react";
-
+import img1 from "../assets/i1.png";
+import img2 from "../assets/i2.png";
+import img3 from "../assets/i3.png";
+import img4 from "../assets/i4.png";
 
 
 const Project = () => {
@@ -7,27 +10,27 @@ const Project = () => {
     {
       title: "E-Commerce Platform",
       description: "A full-featured online store built with React and Node.js. Includes cart functionality, payment processing, and user authentication.",
-      image: "https://images.unsplash.com/photo-1557821552-17105176677c?w=800&q=80",
+      image: img2,
       link: "#"
     },
     {
-      title: "Task Management App",
-      description: "A productivity tool for managing daily tasks and projects. Features drag-and-drop interface and real-time updates.",
-      image: "https://images.unsplash.com/photo-1540350394557-8d14678e7f91?w=800&q=80",
-      link: "#"
-    },
-    {
-      title: "Weather Dashboard",
-      description: "Real-time weather tracking application using OpenWeatherMap API. Displays current conditions and 5-day forecast.",
-      image: "https://images.unsplash.com/photo-1592210454359-9043f067919b?w=800&q=80",
-      link: "#"
+      title: "Invoice Generator",
+      description: "A invoice generator built with Next.Js. Where user can generate invoice for their products.",
+      image: img4,
+      link: "https://billkar.vercel.app"
     },
     {
       title: "Portfolio Website",
       description: "A modern, responsive portfolio website to showcase creative work. Built with React and Tailwind CSS.",
-      image: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=800&q=80",
-      link: "#"
-    }
+      image: img1,
+      link: "https://art-photos-studio.vercel.app/"
+    },
+    {
+      title: "KamDone",
+      description: "A Agency website built with React and Node.js, where user can book their services.",
+      image: img3,
+      link: "https://kamdone.vercel.app"
+    },
   ];
 
   return (
@@ -67,11 +70,14 @@ const Project = () => {
                   {project.description}
                 </p>
                 <a
+                  target="_blank"
+                  rel="noopener noreferrer"
                   href={project.link}
                   className="inline-block px-6 py-2 bg-white text-black font-bold rounded-full hover:bg-zinc-200 transition-colors"
                 >
                   View Project
                 </a>
+
               </div>
             </div>
           ))}

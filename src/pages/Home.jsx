@@ -2,6 +2,7 @@ import React from 'react'
 import BlurText from '../components/home/BlurText'
 import { motion } from 'framer-motion'
 import CurvedArrow from '../components/about/CurvedArrow'
+import profileImg from '../assets/img.jpg'
 
 const Home = () => {
   return (
@@ -34,14 +35,14 @@ const Home = () => {
             />
 
             {/* Decorative Arrow pointing to name/work */}
-            <motion.div
-              initial={{ opacity: 0, rotate: 12, scale: 0.8 }}
-              animate={{ opacity: 1, rotate: 12, scale: 1 }}
+            {/* <motion.div
+              initial={{ opacity: 0, rotate: 10, scale: 0.8 }}
+              animate={{ opacity: 1, rotate: 10, scale: 1 }}
               transition={{ delay: 2.5, duration: 0.8 }}
               className="absolute -right-8 -top-8 w-12 md:w-auto md:-right-20 md:-top-16 opacity-60 hidden md:block"
             >
               <CurvedArrow />
-            </motion.div>
+            </motion.div> */}
           </div>
 
           <motion.h5
@@ -50,7 +51,7 @@ const Home = () => {
             transition={{ duration: 0.8, delay: 1.8 }}
             className="text-xl md:text-3xl font-caveat text-blue-400 font-medium tracking-wide mb-8 md:mb-10"
           >
-            MERN STACK DEVELOPER
+            FULL STACK DEVELOPER
           </motion.h5>
 
           <motion.div
@@ -79,7 +80,7 @@ const Home = () => {
             {/* Image Container with Mask */}
             <div className="absolute inset-0 rounded-[1.5rem] md:rounded-[2rem] overflow-hidden grayscale hover:grayscale-0 transition-all duration-700 z-10 shadow-2xl shadow-blue-900/20">
               <img
-                src="./src/assets/img.jpg" // Using the path found in previous Photo.jsx
+                src={profileImg} // Using imported image
                 alt="Aditya Sutar"
                 className="w-full h-full object-cover transform scale-105 hover:scale-110 transition-transform duration-700"
               />

@@ -50,18 +50,18 @@ const Contact = () => {
                             viewport={{ once: true }}
                             className="group"
                         >
-                            <label htmlFor="name" className="block text-sm uppercase tracking-wider text-zinc-500 mb-4 group-focus-within:text-white transition-colors duration-300">
+                            <label htmlFor="name" className="block text-sm uppercase tracking-wider text-zinc-500 mb-3 group-focus-within:text-white transition-colors duration-300">
                                 01 &nbsp; What's your name?
                             </label>
                             <input
                                 type="text"
                                 id="name"
                                 name="name"
-                                placeholder="John Doe *"
+                                placeholder="Adi Sutar *"
                                 value={formData.name}
                                 onChange={handleChange}
                                 required
-                                className="w-full bg-transparent border-b border-zinc-800 py-4 text-xl md:text-2xl text-white focus:outline-none focus:border-white transition-colors duration-300 placeholder:text-zinc-700"
+                                className="w-full bg-transparent border-b border-zinc-800 py-3 text-xl md:text-2xl text-white focus:outline-none focus:border-white transition-colors duration-300 placeholder:text-zinc-700"
                             />
                         </motion.div>
 
@@ -72,18 +72,18 @@ const Contact = () => {
                             viewport={{ once: true }}
                             className="group"
                         >
-                            <label htmlFor="email" className="block text-sm uppercase tracking-wider text-zinc-500 mb-4 group-focus-within:text-white transition-colors duration-300">
+                            <label htmlFor="email" className="block text-sm uppercase tracking-wider text-zinc-500 mb-3 group-focus-within:text-white transition-colors duration-300">
                                 02 &nbsp; What's your email?
                             </label>
                             <input
                                 type="email"
                                 id="email"
                                 name="email"
-                                placeholder="john@doe.com *"
+                                placeholder="adisutar123@gmail.com *"
                                 value={formData.email}
                                 onChange={handleChange}
                                 required
-                                className="w-full bg-transparent border-b border-zinc-800 py-4 text-xl md:text-2xl text-white focus:outline-none focus:border-white transition-colors duration-300 placeholder:text-zinc-700"
+                                className="w-full bg-transparent border-b border-zinc-800 py-3 text-xl md:text-2xl text-white focus:outline-none focus:border-white transition-colors duration-300 placeholder:text-zinc-700"
                             />
                         </motion.div>
 
@@ -94,28 +94,28 @@ const Contact = () => {
                             viewport={{ once: true }}
                             className="group"
                         >
-                            <label htmlFor="org" className="block text-sm uppercase tracking-wider text-zinc-500 mb-4 group-focus-within:text-white transition-colors duration-300">
+                            <label htmlFor="org" className="block text-sm uppercase tracking-wider text-zinc-500 mb-3 group-focus-within:text-white transition-colors duration-300">
                                 03 &nbsp; What's the name of your organization?
                             </label>
                             <input
                                 type="text"
                                 id="org"
                                 name="org"
-                                placeholder="John & Doe ®"
+                                placeholder="Organization Name"
                                 value={formData.org}
                                 onChange={handleChange}
-                                className="w-full bg-transparent border-b border-zinc-800 py-4 text-xl md:text-2xl text-white focus:outline-none focus:border-white transition-colors duration-300 placeholder:text-zinc-700"
+                                className="w-full bg-transparent border-b border-zinc-800 py-3 text-xl md:text-2xl text-white focus:outline-none focus:border-white transition-colors duration-300 placeholder:text-zinc-700"
                             />
                         </motion.div>
 
-                        <motion.div
+                        {/* <motion.div
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8, delay: 0.5 }}
                             viewport={{ once: true }}
                             className="group"
                         >
-                            <label htmlFor="services" className="block text-sm uppercase tracking-wider text-zinc-500 mb-4 group-focus-within:text-white transition-colors duration-300">
+                            <label htmlFor="services" className="block text-sm uppercase tracking-wider text-zinc-500 mb-3 group-focus-within:text-white transition-colors duration-300">
                                 04 &nbsp; What services are you looking for?
                             </label>
                             <input
@@ -125,9 +125,9 @@ const Contact = () => {
                                 placeholder="Web Design, Development..."
                                 value={formData.services}
                                 onChange={handleChange}
-                                className="w-full bg-transparent border-b border-zinc-800 py-4 text-xl md:text-2xl text-white focus:outline-none focus:border-white transition-colors duration-300 placeholder:text-zinc-700"
+                                className="w-full bg-transparent border-b border-zinc-800 py-3 text-xl md:text-2xl text-white focus:outline-none focus:border-white transition-colors duration-300 placeholder:text-zinc-700"
                             />
-                        </motion.div>
+                        </motion.div> */}
 
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}
@@ -137,7 +137,7 @@ const Contact = () => {
                             className="group"
                         >
                             <label htmlFor="message" className="block text-sm uppercase tracking-wider text-zinc-500 mb-4 group-focus-within:text-white transition-colors duration-300">
-                                05 &nbsp; Your Message
+                                04 &nbsp; Your Message
                             </label>
                             <textarea
                                 id="message"
@@ -147,7 +147,7 @@ const Contact = () => {
                                 onChange={handleChange}
                                 required
                                 rows="3"
-                                className="w-full bg-transparent border-b border-zinc-800 py-4 text-xl md:text-2xl text-white focus:outline-none focus:border-white transition-colors duration-300 placeholder:text-zinc-700 resize-none"
+                                className="w-full bg-transparent border-b border-zinc-800 py-3 text-xl md:text-2xl text-white focus:outline-none focus:border-white transition-colors duration-300 placeholder:text-zinc-700 resize-none"
                             ></textarea>
                         </motion.div>
 
@@ -156,7 +156,7 @@ const Contact = () => {
                             whileInView={{ opacity: 1 }}
                             transition={{ duration: 0.8, delay: 0.8 }}
                             viewport={{ once: true }}
-                            className="pt-8"
+                            className="pt-7 justify-center"
                         >
                             <button
                                 type="submit"
@@ -197,12 +197,22 @@ const Contact = () => {
                     <div>
                         <h4 className="text-xs uppercase tracking-widest text-zinc-500 mb-4">Socials</h4>
                         <div className="flex flex-col gap-2">
-                            {['LinkedIn', 'Instagram', 'Twitter', 'Github'].map((social) => (
-                                <a key={social} href="#" className="text-lg md:text-xl text-white hover:text-blue-500 transition-colors flex items-center gap-2 group">
-                                    {social}
-                                    <ArrowUpRight className="w-4 h-4 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" />
-                                </a>
-                            ))}
+                            <a href="https://www.linkedin.com/in/aditya-sutar/" target="_blank" rel="noopener noreferrer" className="text-lg md:text-xl text-white hover:text-blue-500 transition-colors flex items-center gap-2 group">
+                                LinkedIn
+                                <ArrowUpRight className="w-4 h-4 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" />
+                            </a>
+                            <a href="https://www.instagram.com/__adi__creation/" target="_blank" rel="noopener noreferrer" className="text-lg md:text-xl text-white hover:text-blue-500 transition-colors flex items-center gap-2 group">
+                                Instagram
+                                <ArrowUpRight className="w-4 h-4 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" />
+                            </a>
+                            {/* <a href="https://twitter.com/aditya_sutar" target="_blank" rel="noopener noreferrer" className="text-lg md:text-xl text-white hover:text-blue-500 transition-colors flex items-center gap-2 group">
+                                Twitter
+                                <ArrowUpRight className="w-4 h-4 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" />
+                            </a> */}
+                            <a href="https://github.com/Editorhacker" target="_blank" rel="noopener noreferrer" className="text-lg md:text-xl text-white hover:text-blue-500 transition-colors flex items-center gap-2 group">
+                                Github
+                                <ArrowUpRight className="w-4 h-4 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" />
+                            </a>
                         </div>
                     </div>
 
