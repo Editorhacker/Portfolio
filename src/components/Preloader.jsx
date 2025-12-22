@@ -7,11 +7,11 @@ const words = [
     "Hola",             // Spanish
     "Ciao",             // Italian
     "Olá",              // Portuguese
-    "Hallo",            // German
     "नमस्ते",            // Hindi
     "こんにちは",         // Japanes
     "Привет",           // Russian
     "Merhaba",          // Turkish
+    "Hallo",            // German
 ];
 
 const Preloader = ({ finishLoading }) => {
@@ -34,7 +34,7 @@ const Preloader = ({ finishLoading }) => {
         }
         setTimeout(() => {
             setIndex(index + 1);
-        }, index == 0 ? 1000 : 150);
+        }, index == 0 ? 700 : 120);
     }, [index]);
 
     // Separate useEffect for the completion logic to trigger finishLoading
@@ -42,7 +42,7 @@ const Preloader = ({ finishLoading }) => {
         if (index === words.length - 1) {
             const timer = setTimeout(() => {
                 finishLoading();
-            }, 1000);
+            }, 700);
             return () => clearTimeout(timer);
         }
     }, [index, finishLoading]);

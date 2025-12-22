@@ -7,11 +7,11 @@ import img4 from "../assets/i4.png";
 
 const Project = () => {
   const projects = [
-    {
-      title: "E-Commerce Platform",
-      description: "A full-featured online store built with React and Node.js. Includes cart functionality, payment processing, and user authentication.",
-      image: img2,
-      link: "#"
+     {
+      title: "KamDone",
+      description: "A Agency website built with React and Node.js, where user can book their services.",
+      image: img3,
+      link: "https://kamdone.vercel.app"
     },
     {
       title: "Invoice Generator",
@@ -26,10 +26,10 @@ const Project = () => {
       link: "https://art-photos-studio.vercel.app/"
     },
     {
-      title: "KamDone",
-      description: "A Agency website built with React and Node.js, where user can book their services.",
-      image: img3,
-      link: "https://kamdone.vercel.app"
+      title: "E-Commerce Platform",
+      description: "A full-featured online store built with React and Node.js. Includes cart functionality, payment processing, and user authentication.",
+      image: img2,
+      link: "#"
     },
   ];
 

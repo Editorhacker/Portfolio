@@ -186,11 +186,11 @@ const Contact = () => {
                 >
                     <div>
                         <h4 className="text-xs uppercase tracking-widest text-zinc-500 mb-4">Contact Details</h4>
-                        <a href="mailto:hello@aditya.dev" className="block text-lg md:text-xl text-white hover:text-blue-500 transition-colors mb-2">
-                            hello@aditya.dev
+                        <a href="mailto:adityasutar2807@gmail.com" className="block text-lg md:text-xl text-white hover:text-blue-500 transition-colors mb-2">
+                            adityasutar2807@gmail.com
                         </a>
-                        <a href="tel:+911234567890" className="block text-lg md:text-xl text-white hover:text-blue-500 transition-colors">
-                            +91 123 456 7890
+                        <a href="tel:+919767126282" className="block text-lg md:text-xl text-white hover:text-blue-500 transition-colors">
+                            +91 9767126282
                         </a>
                     </div>
 

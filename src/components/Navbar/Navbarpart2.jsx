@@ -14,25 +14,33 @@ const Navbarpart2 = () => {
   }
 
   const menuItems = [
-    { id: 'work', label: 'Work' },
     { id: 'about', label: 'About' },
+    { id: 'work', label: 'Work' },
     { id: 'contact', label: 'Contact' }
   ]
 
   return (
     <div>
       {/* Desktop Menu */}
-      <div className='hidden md:flex justify-between items-center gap-8 cursor-pointer text-white text-base capitalize font-bold pb-5'>
-        {menuItems.map((item) => (
-          <h4
-            key={item.id}
-            className='transition-transform duration-300 hover:scale-110'
-            onClick={() => scrollToSection(item.id)}
-          >
-            {item.label}
-          </h4>
-        ))}
+    <div className='hidden md:flex justify-between items-center gap-8 cursor-pointer text-white text-base capitalize font-bold pb-5'>
+  {menuItems.map((item) => (
+    <h4
+      key={item.id}
+      onClick={() => scrollToSection(item.id)}
+      className='group relative flex flex-col items-center transition-transform duration-300 hover:scale-110'
+    >
+      {item.label}
+
+      {/* Dot appears only on hover */}
+      <div className='mt-1 w-1 h-1  bg-white rounded-full 
+                      opacity-0 scale-0 
+                      group-hover:opacity-100 group-hover:scale-110 
+                      transition-all duration-300'>
       </div>
+    </h4>
+  ))}
+</div>
+
 
       {/* Mobile Menu Toggle */}
       <div className="md:hidden pb-5">
@@ -64,7 +72,7 @@ const Navbarpart2 = () => {
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.1 }}
-                  className='text-5xl font-caveat font-bold text-white cursor-pointer hover:text-blue-500 transition-colors'
+                  className='text-5xl font-sans font-bold text-white cursor-pointer hover:text-blue-500 transition-colors'
                   onClick={() => scrollToSection(item.id)}
                 >
                   {item.label}
