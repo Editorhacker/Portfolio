@@ -3,6 +3,8 @@ import img1 from "../assets/i1.png";
 import img2 from "../assets/i2.png";
 import img3 from "../assets/i3.png";
 import img4 from "../assets/i4.png";
+import img5 from "../assets/i5.png";
+import { link } from "fs";
 
 
 const Project = () => {
@@ -25,6 +27,13 @@ const Project = () => {
       image: img1,
       link: "https://art-photos-studio.vercel.app/"
     },
+    {
+      title: "Photo Share",
+      description: "PhotoShare is a full-stack web application that allows photographers to upload client photos to Google Drive, compress them, and share view-only public galleries with clients. ",
+      image: img5,
+      link: "https://photoshareweb.vercel.app/"
+    },
+
     {
       title: "E-Commerce Platform",
       description: "A full-featured online store built with React and Node.js. Includes cart functionality, payment processing, and user authentication.",
