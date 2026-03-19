@@ -25,8 +25,8 @@ const About = () => {
   return (
     <div className="min-h-screen pt-24 pb-16 px-4 md:px-6 bg-zinc-950 text-foreground flex flex-col justify-center text-justify relative overflow-hidden">
       {/* Background Decor */}
-      <div className="absolute top-20 left-10 w-48 h-48 md:w-72 md:h-72 bg-blue-500/10 rounded-full blur-[80px] md:blur-[100px] pointer-events-none" />
-      <div className="absolute bottom-20 right-10 w-48 h-48 md:w-72 md:h-72 bg-purple-500/10 rounded-full blur-[80px] md:blur-[100px] pointer-events-none" />
+      <div className="absolute top-20 left-10 w-48 h-48 md:w-72 md:h-72 bg-blue-500/10 rounded-full blur-[60px] md:blur-[80px] pointer-events-none transform-gpu" />
+      <div className="absolute bottom-20 right-10 w-48 h-48 md:w-72 md:h-72 bg-purple-500/10 rounded-full blur-[60px] md:blur-[80px] pointer-events-none transform-gpu" />
 
       <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
 

@@ -4,6 +4,7 @@ import Lenis from 'lenis'
 import Navbar from './components/Navbar/Navbar'
 import Home from './pages/Home'
 import About from './pages/About'
+import Experience from './pages/Experience'
 import Project from './pages/Project'
 import Contact from './pages/Contact'
 import Preloader from './components/Preloader'
@@ -14,16 +15,17 @@ const App = () => {
 
   useEffect(() => {
     const lenis = new Lenis()
+    let rafId;
 
     function raf(time) {
       lenis.raf(time)
-      requestAnimationFrame(raf)
+      rafId = requestAnimationFrame(raf)
     }
 
-    requestAnimationFrame(raf)
+    rafId = requestAnimationFrame(raf)
 
     return () => {
-      // Lenis cleanup if needed, though usually global on window
+      cancelAnimationFrame(rafId)
       lenis.destroy()
     }
   }, [])
@@ -44,6 +46,11 @@ const App = () => {
       {/* About Section */}
       <section id="about" className="min-h-screen">
         <About />
+      </section>
+
+      {/* Experience Section */}
+      <section id="experience" className="min-h-screen">
+        <Experience />
       </section>
 
       {/* Projects Section */}

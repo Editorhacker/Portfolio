@@ -4,7 +4,6 @@ import img2 from "../assets/i2.png";
 import img3 from "../assets/i3.png";
 import img4 from "../assets/i4.png";
 import img5 from "../assets/i5.png";
-import { link } from "fs";
 
 
 const Project = () => {
@@ -13,40 +12,45 @@ const Project = () => {
       title: "KamDone",
       description: "A Agency website built with React and Node.js, where user can book their services.",
       image: img3,
-      link: "https://kamdone.vercel.app"
+      link: "https://kamdone.vercel.app",
+      codeLink: "https://github.com/Editorhacker/KamDone"
     },
     {
       title: "Invoice Generator",
       description: "A invoice generator built with Next.Js. Where user can generate invoice for their products.",
       image: img4,
-      link: "https://billkar.vercel.app"
+      link: "https://billkar.vercel.app",
+      codeLink: "https://github.com/Editorhacker/Invoice"
     },
     {
       title: "Portfolio Website",
       description: "A modern, responsive portfolio website to showcase creative work. Built with React and Tailwind CSS.",
       image: img1,
-      link: "https://art-photos-studio.vercel.app/"
+      link: "https://art-photos-studio.vercel.app/",
+      codeLink: "https://github.com/Editorhacker/Art-photos"
     },
     {
       title: "Photo Share",
       description: "PhotoShare is a full-stack web application that allows photographers to upload client photos to Google Drive, compress them, and share view-only public galleries with clients. ",
       image: img5,
-      link: "https://photoshareweb.vercel.app/"
+      link: "https://photoshareweb.vercel.app/",
+      codeLink: "https://github.com/Editorhacker/photoshare"
     },
 
     {
       title: "E-Commerce Platform",
       description: "A full-featured online store built with React and Node.js. Includes cart functionality, payment processing, and user authentication.",
       image: img2,
-      link: "#"
+      link: "#",
+      codeLink: "https://github.com/Editorhacker"
     },
   ];
 
   return (
     <section id="work" className="min-h-screen pt-24 pb-16 px-4 md:px-6 bg-zinc-950 text-white flex flex-col justify-center relative overflow-hidden">
       {/* Background Decor */}
-      <div className="absolute top-[20%] right-[-10%] w-[300px] h-[300px] md:w-[500px] md:h-[500px] bg-purple-500/10 rounded-full blur-[80px] md:blur-[120px] pointer-events-none" />
-      <div className="absolute bottom-[20%] left-[-10%] w-[300px] h-[300px] md:w-[600px] md:h-[600px] bg-blue-600/10 rounded-full blur-[80px] md:blur-[120px] pointer-events-none" />
+      <div className="absolute top-[20%] right-[-10%] w-[300px] h-[300px] md:w-[500px] md:h-[500px] bg-purple-500/10 rounded-full blur-[80px] pointer-events-none transform-gpu" />
+      <div className="absolute bottom-[20%] left-[-10%] w-[300px] h-[300px] md:w-[600px] md:h-[600px] bg-blue-600/10 rounded-full blur-[80px] pointer-events-none transform-gpu" />
 
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         {/* Section Heading */}
@@ -60,7 +64,7 @@ const Project = () => {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="bg-white/5 border border-white/10 backdrop-blur-sm rounded-xl overflow-hidden hover:scale-105 transition-transform duration-300 shadow-xl group"
+              className="flex flex-col h-full bg-white/5 border border-white/10 backdrop-blur-sm rounded-2xl overflow-hidden hover:-translate-y-2 transition-all duration-300 shadow-xl hover:shadow-[0_20px_40px_-15px_rgba(59,130,246,0.3)] hover:border-blue-500/30 group"
             >
               <div className="relative h-48 overflow-hidden">
                 <img
@@ -71,21 +75,31 @@ const Project = () => {
                 <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-300" />
               </div>
 
-              <div className="p-6">
+              <div className="p-6 flex flex-col flex-grow">
                 <h3 className="text-2xl font-semibold mb-3 text-white group-hover:text-blue-400 transition-colors">
                   {project.title}
                 </h3>
                 <p className="text-zinc-400 mb-6 line-clamp-3">
                   {project.description}
                 </p>
-                <a
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href={project.link}
-                  className="inline-block px-6 py-2 bg-white text-black font-bold rounded-full hover:bg-zinc-200 transition-colors"
-                >
-                  View Project
-                </a>
+                <div className="flex flex-wrap gap-4 mt-auto">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href={project.link}
+                    className="inline-block px-6 py-2 bg-white text-black font-bold rounded-full transition-all duration-300 transform hover:scale-105 hover:bg-zinc-900 hover:text-white hover:border-zinc-700 border border-transparent"
+                  >
+                    View Project
+                  </a>
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href={project.codeLink}
+                    className="inline-flex items-center gap-2 px-6 py-2 border border-blue-500/50 text-blue-400 font-bold rounded-full bg-transparent transition-all duration-300 transform hover:scale-105 hover:bg-blue-600 hover:text-white hover:border-blue-400 hover:shadow-[0_0_20px_rgba(59,130,246,0.6)]"
+                  >
+                    View Code
+                  </a>
+                </div>
 
               </div>
             </div>
