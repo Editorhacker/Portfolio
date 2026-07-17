@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://aditya-sutar.vercel.app/sitemap.xml
+Sitemap: https://adisutar.c0der.workers.dev/sitemap.xml
