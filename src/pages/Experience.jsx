@@ -12,8 +12,8 @@ const Experience = () => {
       role: "Cloud Computing Intern",
       company: "Codec Technologies India",
       type: "Internship",
-      duration: "Mar 2026 - Present",
-      durationDetail: "1 mo",
+      duration: "Mar 2026 - Jul 2026",
+      durationDetail: "3 mo",
       location: "India · Hybrid",
       logo: codeclogo,
       gradient: "from-cyan-400 to-blue-600",
@@ -74,7 +74,7 @@ const Experience = () => {
                 >
 
                   {/* Timeline Badge/Icon */}
-                  <div className="absolute left-[20px] md:left-1/2 transform -translate-x-1/2 flex items-center justify-center hidden sm:flex z-20">
+                  <div className="absolute left-[20px] md:left-1/2 transform -translate-x-1/2 flex items-center justify-center  sm:flex z-20">
                     <motion.div
                       whileHover={{ scale: 1.2, rotate: 10 }}
                       className={`w-10 h-10 md:w-14 md:h-14 rounded-full bg-zinc-950 border-2 border-white/20 group-hover:border-blue-400 flex items-center justify-center shadow-lg transition-all duration-300 z-10 box-border`}
@@ -90,20 +90,20 @@ const Experience = () => {
                   <div className={`w-full sm:pl-20 md:w-1/2 md:px-10 ${isEven ? 'md:text-right' : 'md:text-left'} relative z-10 mt-6 sm:mt-0`}>
                     <motion.div
                       whileHover={{ y: -5 }}
-                      className={`relative overflow-hidden ${exp.bgBlur} border border-white/10 ${exp.borderGlow} rounded-[2rem] p-8 sm:p-10 transition-all duration-500 shadow-2xl hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.5)]`}
+                      className={`relative overflow-hidden ${exp.bgBlur} border border-white/10 ${exp.borderGlow} rounded-[2rem] p-6 sm:p-10 transition-all duration-500 shadow-2xl hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.5)]`}
                     >
                       {/* Decorative Gradient Blob inside card */}
                       <div className={`absolute -top-24 ${isEven ? '-left-24' : '-right-24'} w-48 h-48 bg-gradient-to-br ${exp.gradient} rounded-full blur-[80px] opacity-20 group-hover:opacity-40 transition-opacity duration-700`}></div>
 
                       <div className={`flex flex-col sm:flex-row items-start ${isEven ? 'md:flex-row-reverse md:items-center md:justify-end md:text-right' : 'sm:items-center'} gap-6 mb-8 relative z-10`}>
                         {/* Company Logo representation */}
-                        <div className={`flex-shrink-0 w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-gradient-to-br ${exp.gradient} p-[4px] shadow-lg group-hover:scale-105 transition-transform duration-500`}>
-                          <div className="w-full h-full bg-zinc-950 rounded-[14px] flex items-center justify-center">
+                        <div className={`flex-shrink-0 w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-gradient-to-br ${exp.gradient} p-[3px] sm:p-[4px] shadow-lg group-hover:scale-105 transition-transform duration-500`}>
+                          <div className="w-full h-full bg-zinc-950 rounded-[14px] flex items-center justify-center overflow-hidden">
                             {typeof exp.logo === "string" && exp.logo.endsWith(".png") ? (
                               <img
                                 src={exp.logo}
                                 alt={exp.company}
-                                className="w-18 h-18 object-contain rounded-[13px]"
+                                className="w-full h-full object-contain bg-white"
                               />
                             ) : (
                               <span className={`text-2xl sm:text-3xl font-black bg-clip-text text-transparent bg-gradient-to-br ${exp.gradient}`}>

@@ -44,7 +44,7 @@ const Navbarpart2 = () => {
 
 
       {/* Mobile Menu Toggle */}
-      <div className="md:hidden pb-5">
+      <div className="md:hidden pb-2">
         <button onClick={() => setIsOpen(true)} className="text-white p-2">
           <Menu className="w-8 h-8" />
         </button>
@@ -67,16 +67,17 @@ const Navbarpart2 = () => {
             </div>
 
             <div className="flex flex-col gap-10 text-center">
-              {menuItems.map((item) => (
+              {menuItems.map((item, index) => (
                 <motion.h4
                   key={item.id}
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.1 }}
-                  className='text-5xl font-sans font-bold text-white cursor-pointer hover:text-blue-500 transition-colors'
+                  transition={{ delay: 0.1 + index * 0.1 }}
+                  className='text-4xl sm:text-5xl font-myFont font-bold text-white cursor-pointer hover:text-blue-500 transition-colors relative group'
                   onClick={() => scrollToSection(item.id)}
                 >
                   {item.label}
+                  <span className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-0 h-1 bg-blue-500 transition-all duration-300 group-hover:w-1/2 rounded-full"></span>
                 </motion.h4>
               ))}
             </div>

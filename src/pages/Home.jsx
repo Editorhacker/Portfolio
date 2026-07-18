@@ -51,7 +51,8 @@ const Home = () => {
             transition={{ duration: 0.8, delay: 1.8 }}
             className="text-xl md:text-3xl font-caveat text-blue-400 font-medium tracking-wide mb-8 md:mb-10"
           >
-            FULL STACK DEVELOPER
+            FULL STACK DEVELOPER AND <br/> 
+            AWS CLOUD ENGINEER
           </motion.h5>
 
           <motion.div
@@ -100,7 +101,7 @@ const Home = () => {
 
             {/* Decorative Elements behind image */}
             <div className="absolute -inset-3 md:-inset-4 border border-zinc-800 rounded-[2rem] md:rounded-[2.5rem] z-0" />
-            <div className="absolute -bottom-6 -left-6 md:-bottom-8 md:-left-8 w-24 h-24 md:w-32 md:h-32 bg-zinc-900/80 backdrop-blur-md rounded-2xl border border-zinc-800 z-20 flex items-center justify-center shadow-xl hidden sm:flex">
+            <div className="absolute -bottom-6 -left-6 md:-bottom-8 md:-left-8 w-24 h-24 md:w-32 md:h-32 bg-zinc-900/80 backdrop-blur-md rounded-2xl border border-zinc-800 z-20 flex items-center justify-center shadow-xl  sm:flex">
               <div className="text-center">
                 <span className="block text-2xl md:text-3xl font-bold text-white">3+</span>
                 <span className="text-[10px] md:text-xs text-zinc-400 uppercase tracking-widest">Projects</span>
