@@ -4,21 +4,19 @@ import react from "@vitejs/plugin-react"
 import { defineConfig } from "vite"
 import { ViteImageOptimizer } from 'vite-plugin-image-optimizer'
 
+import { cloudflare } from "@cloudflare/vite-plugin";
+
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [
-    react(),
-    tailwindcss(),
-    ViteImageOptimizer({
-      // PNG: compress aggressively
-      png: { quality: 80 },
-      // JPEG: balance quality vs size
-      jpeg: { quality: 75 },
-      jpg: { quality: 75 },
-      // WebP: most efficient format
-      webp: { lossless: false, quality: 80 },
-    }),
-  ],
+  plugins: [react(), tailwindcss(), ViteImageOptimizer({
+    // PNG: compress aggressively
+    png: { quality: 80 },
+    // JPEG: balance quality vs size
+    jpeg: { quality: 75 },
+    jpg: { quality: 75 },
+    // WebP: most efficient format
+    webp: { lossless: false, quality: 80 },
+  }), cloudflare()],
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
