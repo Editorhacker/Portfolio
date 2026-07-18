@@ -4,16 +4,25 @@ import img2 from "../assets/i2.png";
 import img3 from "../assets/i3.png";
 import img4 from "../assets/i4.png";
 import img5 from "../assets/i5.png";
+import img6 from "../assets/i6.png";
+import img7 from "../assets/i7.png";
 
 
 const Project = () => {
   const projects = [
-     {
-      title: "KamDone",
-      description: "A Agency website built with React and Node.js, where user can book their services.",
-      image: img3,
-      link: "https://kamdone.vercel.app",
-      codeLink: "https://github.com/Editorhacker/KamDone"
+    {
+      title: "Thunder Game Cafe",
+      description: "A modern and responsive website for a gaming cafe, built with React and Tailwind CSS. It features a sleek design, interactive elements, and showcases the cafe's services and events.",
+      image: img6,
+      link: "https://thunder-management-six.vercel.app/",
+      codeLink: "https://github.com/Editorhacker/thunder-management"
+    },
+    {
+      title: "Kalastra",
+      description: "Kalastra is a modern clothing brand website built with React and Tailwind CSS. It features a sleek design, interactive elements, and showcases the brand's products and collections.",
+      image: img7,
+      link: "https://olive-grouse-793102.hostingersite.com/",
+      codeLink: "https://github.com/Editorhacker/Kalasatra"
     },
     {
       title: "Invoice Generator",
@@ -36,7 +45,13 @@ const Project = () => {
       link: "https://photoshareweb.vercel.app/",
       codeLink: "https://github.com/Editorhacker/photoshare"
     },
-
+    {
+     title: "KamDone",
+     description: "A Agency website built with React and Node.js, where user can book their services.",
+     image: img3,
+     link: "https://kamdone.vercel.app",
+     codeLink: "https://github.com/Editorhacker/KamDone"
+   },
     {
       title: "E-Commerce Platform",
       description: "A full-featured online store built with React and Node.js. Includes cart functionality, payment processing, and user authentication.",
@@ -49,8 +64,8 @@ const Project = () => {
   return (
     <section id="work" className="min-h-screen pt-24 pb-16 px-4 md:px-6 bg-zinc-950 text-white flex flex-col justify-center relative overflow-hidden">
       {/* Background Decor */}
-      <div className="absolute top-[20%] right-[-10%] w-[300px] h-[300px] md:w-[500px] md:h-[500px] bg-purple-500/10 rounded-full blur-[80px] pointer-events-none transform-gpu" />
-      <div className="absolute bottom-[20%] left-[-10%] w-[300px] h-[300px] md:w-[600px] md:h-[600px] bg-blue-600/10 rounded-full blur-[80px] pointer-events-none transform-gpu" />
+      <div className="absolute top-[20%] right-[-10%] w-[300px] h-[300px] md:w-[500px] md:h-[500px] bg-purple-500/10 rounded-full blur-[80px] pointer-events-none will-change-transform" style={{transform: 'translateZ(0)'}} />
+      <div className="absolute bottom-[20%] left-[-10%] w-[300px] h-[300px] md:w-[600px] md:h-[600px] bg-blue-600/10 rounded-full blur-[80px] pointer-events-none will-change-transform" style={{transform: 'translateZ(0)'}} />
 
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         {/* Section Heading */}
@@ -64,12 +79,14 @@ const Project = () => {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="flex flex-col h-full bg-white/5 border border-white/10 backdrop-blur-sm rounded-2xl overflow-hidden hover:-translate-y-2 transition-all duration-300 shadow-xl hover:shadow-[0_20px_40px_-15px_rgba(59,130,246,0.3)] hover:border-blue-500/30 group"
+              className="flex flex-col h-full bg-zinc-900/80 border border-white/10 rounded-2xl overflow-hidden hover:-translate-y-2 transition-all duration-300 shadow-xl hover:shadow-[0_20px_40px_-15px_rgba(59,130,246,0.3)] hover:border-blue-500/30 group"
             >
               <div className="relative h-48 overflow-hidden">
                 <img
                   src={project.image}
                   alt={project.title}
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-300" />

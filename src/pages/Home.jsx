@@ -7,9 +7,9 @@ import profileImg from '../assets/img.jpg'
 const Home = () => {
   return (
     <div className="relative min-h-screen w-full bg-zinc-950 overflow-hidden flex items-center justify-center px-4 md:px-6">
-      {/* Background Decor */}
-      <div className="absolute top-[-10%] right-[-5%] w-[300px] h-[300px] md:w-[500px] md:h-[500px] bg-indigo-500/20 rounded-full blur-[80px] pointer-events-none opacity-50 transform-gpu" />
-      <div className="absolute bottom-[-10%] left-[-10%] w-[300px] h-[300px] md:w-[600px] md:h-[600px] bg-blue-600/10 rounded-full blur-[80px] pointer-events-none opacity-50 transform-gpu" />
+      {/* Background Decor - GPU composited, pointer-events off */}
+      <div className="absolute top-[-10%] right-[-5%] w-[300px] h-[300px] md:w-[500px] md:h-[500px] bg-indigo-500/20 rounded-full blur-[80px] pointer-events-none opacity-50 will-change-transform" style={{transform: 'translateZ(0)'}} />
+      <div className="absolute bottom-[-10%] left-[-10%] w-[300px] h-[300px] md:w-[600px] md:h-[600px] bg-blue-600/10 rounded-full blur-[80px] pointer-events-none opacity-50 will-change-transform" style={{transform: 'translateZ(0)'}} />
 
       <div className="max-w-7xl w-full grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-0 items-center relative z-10 pt-20 lg:pt-0">
 
@@ -64,7 +64,7 @@ const Home = () => {
               <div className="absolute inset-0 bg-gradient-to-r from-zinc-200 to-white opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10"></div>
               <span className="relative">View Work</span>
             </a>
-            <a href="/resume.pdf" download="Aditya_Sutar_Resume.pdf" className="relative overflow-hidden px-6 py-3 md:px-8 md:py-3 bg-blue-600 border border-blue-500 text-white font-bold rounded-full transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 text-center shadow-[0_0_20px_rgba(37,99,235,0.4)] hover:shadow-[0_20px_35px_-10px_rgba(37,99,235,0.6)] flex items-center justify-center gap-2 group isolate">
+            <a href="/Resume.pdf" download="Aditya_Sutar_Resume.pdf" className="relative overflow-hidden px-6 py-3 md:px-8 md:py-3 bg-blue-600 border border-blue-500 text-white font-bold rounded-full transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 text-center shadow-[0_0_20px_rgba(37,99,235,0.4)] hover:shadow-[0_20px_35px_-10px_rgba(37,99,235,0.6)] flex items-center justify-center gap-2 group isolate">
               <div className="absolute inset-0 bg-gradient-to-r from-teal-400 via-blue-500 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10"></div>
               <span className="relative">Resume</span>
               <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="relative group-hover:translate-y-1 group-hover:scale-110 transition-transform duration-300"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
@@ -87,8 +87,11 @@ const Home = () => {
             {/* Image Container with Mask */}
             <div className="absolute inset-0 rounded-[1.5rem] md:rounded-[2rem] overflow-hidden grayscale hover:grayscale-0 transition-all duration-700 z-10 shadow-2xl shadow-blue-900/20">
               <img
-                src={profileImg} // Using imported image
+                src={profileImg}
                 alt="Aditya Sutar"
+                loading="eager"
+                fetchPriority="high"
+                decoding="async"
                 className="w-full h-full object-cover transform scale-105 hover:scale-110 transition-transform duration-700"
               />
               {/* Overlay Gradient */}

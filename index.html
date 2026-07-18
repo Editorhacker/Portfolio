@@ -42,9 +42,23 @@
     <meta name="application-name" content="Aditya Sutar Portfolio" />
     <meta name="msapplication-TileColor" content="#09090b" />
     
-    <!-- DNS Prefetch for Performance -->
+    <!-- DNS Prefetch & Preconnect for Performance -->
     <link rel="dns-prefetch" href="//cdn.jsdelivr.net" />
-    <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+    <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Non-blocking Google Fonts (display=swap prevents FOIT) -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&family=Caveat:wght@400..700&display=swap"
+      media="print"
+      onload="this.media='all'"
+    />
+    <noscript>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&family=Caveat:wght@400..700&display=swap" />
+    </noscript>
     
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="/Icon.ico" />

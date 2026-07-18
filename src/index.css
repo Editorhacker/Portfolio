@@ -1,10 +1,15 @@
 @import "tailwindcss";
 
 html {
-  scroll-behavior: smooth;
+  /* Do NOT set scroll-behavior:smooth — Lenis handles smooth scrolling */
+  /* scroll-behavior: smooth conflicts with Lenis and causes double-interpolation jank */
+  overflow-x: hidden;
 }
 
-body{
+body {
   background: #000;
-  color: white
+  color: white;
+  overflow-x: hidden;
+  /* Prevent scroll chaining on mobile */
+  overscroll-behavior: none;
 }

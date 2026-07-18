@@ -38,8 +38,8 @@ const Experience = () => {
   return (
     <div className="min-h-screen pt-24 pb-24 px-4 md:px-6 bg-zinc-950 text-white flex flex-col justify-center relative overflow-hidden w-full">
       {/* Dynamic Background Gradients */}
-      <div className="absolute top-[20%] right-[10%] w-[300px] h-[300px] md:w-[600px] md:h-[600px] bg-blue-600/10 rounded-full blur-[80px] pointer-events-none opacity-50 transform-gpu" />
-      <div className="absolute bottom-[20%] left-[10%] w-[300px] h-[300px] md:w-[500px] md:h-[500px] bg-purple-600/10 rounded-full blur-[80px] pointer-events-none opacity-50 transform-gpu" />
+      <div className="absolute top-[20%] right-[10%] w-[300px] h-[300px] md:w-[600px] md:h-[600px] bg-blue-600/10 rounded-full blur-[80px] pointer-events-none opacity-50 will-change-transform" style={{transform: 'translateZ(0)'}} />
+      <div className="absolute bottom-[20%] left-[10%] w-[300px] h-[300px] md:w-[500px] md:h-[500px] bg-purple-600/10 rounded-full blur-[80px] pointer-events-none opacity-50 will-change-transform" style={{transform: 'translateZ(0)'}} />
 
       <div className="max-w-6xl mx-auto w-full relative z-10">
         <motion.div
@@ -90,7 +90,7 @@ const Experience = () => {
                   <div className={`w-full sm:pl-20 md:w-1/2 md:px-10 ${isEven ? 'md:text-right' : 'md:text-left'} relative z-10 mt-6 sm:mt-0`}>
                     <motion.div
                       whileHover={{ y: -5 }}
-                      className={`relative overflow-hidden ${exp.bgBlur} backdrop-blur-xl border border-white/10 ${exp.borderGlow} rounded-[2rem] p-8 sm:p-10 transition-all duration-500 shadow-2xl hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.5)]`}
+                      className={`relative overflow-hidden ${exp.bgBlur} border border-white/10 ${exp.borderGlow} rounded-[2rem] p-8 sm:p-10 transition-all duration-500 shadow-2xl hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.5)]`}
                     >
                       {/* Decorative Gradient Blob inside card */}
                       <div className={`absolute -top-24 ${isEven ? '-left-24' : '-right-24'} w-48 h-48 bg-gradient-to-br ${exp.gradient} rounded-full blur-[80px] opacity-20 group-hover:opacity-40 transition-opacity duration-700`}></div>

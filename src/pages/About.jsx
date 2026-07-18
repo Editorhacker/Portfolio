@@ -25,8 +25,8 @@ const About = () => {
   return (
     <div className="min-h-screen pt-24 pb-16 px-4 md:px-6 bg-zinc-950 text-foreground flex flex-col justify-center text-justify relative overflow-hidden">
       {/* Background Decor */}
-      <div className="absolute top-20 left-10 w-48 h-48 md:w-72 md:h-72 bg-blue-500/10 rounded-full blur-[60px] md:blur-[80px] pointer-events-none transform-gpu" />
-      <div className="absolute bottom-20 right-10 w-48 h-48 md:w-72 md:h-72 bg-purple-500/10 rounded-full blur-[60px] md:blur-[80px] pointer-events-none transform-gpu" />
+      <div className="absolute top-20 left-10 w-48 h-48 md:w-72 md:h-72 bg-blue-500/10 rounded-full blur-[60px] md:blur-[80px] pointer-events-none will-change-transform" style={{transform: 'translateZ(0)'}} />
+      <div className="absolute bottom-20 right-10 w-48 h-48 md:w-72 md:h-72 bg-purple-500/10 rounded-full blur-[60px] md:blur-[80px] pointer-events-none will-change-transform" style={{transform: 'translateZ(0)'}} />
 
       <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
 
@@ -85,14 +85,18 @@ const About = () => {
                 key={skill.name}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.05 }}
+                transition={{ duration: 0.5, delay: index * 0.04 }}
                 whileHover={{ scale: 1.05, borderColor: "rgba(59, 130, 246, 0.5)" }}
-                className="bg-white/5 border border-white/10 backdrop-blur-sm p-4 rounded-xl flex flex-col items-center justify-center gap-3 transition-colors hover:bg-white/10 group aspect-square"
+                className="bg-zinc-900/80 border border-white/10 p-4 rounded-xl flex flex-col items-center justify-center gap-3 transition-colors hover:bg-zinc-800/80 group aspect-square"
               >
                 <div className="relative w-10 h-10 flex items-center justify-center">
                   <img
                     src={skill.logo}
                     alt={skill.name}
+                    loading="lazy"
+                    decoding="async"
+                    width="40"
+                    height="40"
                     className={`w-full h-full object-contain filter transition-all duration-300 ${skill.className || ''} group-hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.3)]`}
                   />
                 </div>

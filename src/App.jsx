@@ -1,20 +1,28 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, lazy, Suspense } from 'react'
 import { AnimatePresence } from 'framer-motion'
 import Lenis from 'lenis'
 import Navbar from './components/Navbar/Navbar'
 import Home from './pages/Home'
-import About from './pages/About'
-import Experience from './pages/Experience'
-import Project from './pages/Project'
-import Contact from './pages/Contact'
 import Preloader from './components/Preloader'
 import './App.css'
+
+// Lazy-load below-the-fold sections for faster initial paint
+const About = lazy(() => import('./pages/About'))
+const Experience = lazy(() => import('./pages/Experience'))
+const Project = lazy(() => import('./pages/Project'))
+const Contact = lazy(() => import('./pages/Contact'))
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    const lenis = new Lenis()
+    const lenis = new Lenis({
+      duration: 1.2,          // slightly longer = smoother feel
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // expo easing
+      smoothWheel: true,
+      wheelMultiplier: 0.8,   // reduce wheel sensitivity = less jank
+      touchMultiplier: 1.5,
+    })
     let rafId;
 
     function raf(time) {
@@ -38,30 +46,33 @@ const App = () => {
 
       <Navbar />
 
-      {/* Home Section */}
+      {/* Home Section - eagerly loaded (above the fold) */}
       <section id="home" className="min-h-screen">
         <Home />
       </section>
 
-      {/* About Section */}
-      <section id="about" className="min-h-screen">
-        <About />
-      </section>
+      {/* Below-the-fold sections - lazy loaded */}
+      <Suspense fallback={<div className="min-h-screen bg-zinc-950" />}>
+        {/* About Section */}
+        <section id="about" className="min-h-screen">
+          <About />
+        </section>
 
-      {/* Experience Section */}
-      <section id="experience" className="min-h-screen">
-        <Experience />
-      </section>
+        {/* Experience Section */}
+        <section id="experience" className="min-h-screen">
+          <Experience />
+        </section>
 
-      {/* Projects Section */}
-      <section id="work" className="min-h-screen">
-        <Project />
-      </section>
+        {/* Projects Section */}
+        <section id="work" className="min-h-screen">
+          <Project />
+        </section>
 
-      {/* Contact Section */}
-      <section id="contact" className="min-h-screen">
-        <Contact />
-      </section>
+        {/* Contact Section */}
+        <section id="contact" className="min-h-screen">
+          <Contact />
+        </section>
+      </Suspense>
     </div>
   )
 }
