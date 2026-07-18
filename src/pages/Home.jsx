@@ -51,8 +51,7 @@ const Home = () => {
             transition={{ duration: 0.8, delay: 1.8 }}
             className="text-xl md:text-3xl font-caveat text-blue-400 font-medium tracking-wide mb-8 md:mb-10"
           >
-            FULL STACK DEVELOPER AND <br/> 
-            AWS CLOUD ENGINEER
+            FULL STACK DEVELOPER 
           </motion.h5>
 
           <motion.div

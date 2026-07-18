@@ -45,7 +45,7 @@ const Navbarpart2 = () => {
 
       {/* Mobile Menu Toggle */}
       <div className="md:hidden pb-2">
-        <button onClick={() => setIsOpen(true)} className="text-white p-2">
+        <button onClick={() => setIsOpen(true)} className="text-white p-2 relative z-50">
           <Menu className="w-8 h-8" />
         </button>
       </div>
