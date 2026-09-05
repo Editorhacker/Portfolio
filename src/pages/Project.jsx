@@ -21,7 +21,7 @@ const Project = () => {
       title: "Kalastra",
       description: "Kalastra is a modern clothing brand website built with React and Tailwind CSS. It features a sleek design, interactive elements, and showcases the brand's products and collections.",
       image: img7,
-      link: "https://olive-grouse-793102.hostingersite.com/",
+      link: "https://kalastrastyle.com/",
       codeLink: "https://github.com/Editorhacker/Kalasatra"
     },
     {
@@ -42,7 +42,7 @@ const Project = () => {
       title: "Photo Share",
       description: "PhotoShare is a full-stack web application that allows photographers to upload client photos to Google Drive, compress them, and share view-only public galleries with clients. ",
       image: img5,
-      link: "https://photoshareweb.vercel.app/",
+      link: "https://selectyourphoto.vercel.app/",
       codeLink: "https://github.com/Editorhacker/photoshare"
     },
     {
