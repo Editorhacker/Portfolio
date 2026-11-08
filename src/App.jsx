@@ -35,7 +35,10 @@ const App = () => {
     return () => {
       cancelAnimationFrame(rafId)
       lenis.destroy()
-    }
+    }   
+
+
+
   }, [])
 
   return (
